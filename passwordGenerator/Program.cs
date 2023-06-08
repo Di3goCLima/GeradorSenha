@@ -8,11 +8,13 @@ namespace passwordGenerator
         private static int passwordLength;
         static void Main(string[] args)
         {
+            MainMenu.WriteLogo();
+            Console.Write("Insira a quantidade de caracteres desejadas para a senha: ");
             passwordLength = Convert.ToInt32(Console.ReadLine());
 
             upper = lower = number = special = true;
 
-            Console.WriteLine(PasswordGenerate.GeneratePassword(upper, lower, number, special, passwordLength));
+            Console.WriteLine("A senha gerada é: " + PasswordGenerate.GeneratePassword(upper, lower, number, special, passwordLength));
         }
     }
 
